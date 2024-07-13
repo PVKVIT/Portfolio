@@ -51,7 +51,6 @@
         .nav-links a:hover {
             color: #00bcd4;
             font-size: large;
-            transition: 0.3s;
         }
 
         .logo {
@@ -81,7 +80,6 @@
             max-width: 50%;
             padding: 40px;
             margin-left: 60px;
-            margin-right: 50px;
         }
 
         .content h1 {
@@ -93,22 +91,17 @@
             font-size: 2.5em;
             margin-bottom: 10px;
             color: #00bcd4;
-            transform: 0.5s;
-        }
-
-        .hero h2{
-            transition: 0.5s;
-        }
-
-        .content h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
         }
 
         main:hover h2 {
             font-size: 45px;
             margin-bottom: 20px;
             transition: 0.5s;
+        }
+
+        .content h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
         .content h3 span {
@@ -121,7 +114,7 @@
             width: 320px;
             transition: 0.5s;
             box-shadow: 0 0 20px 8px #0b98ac, 0 0 24px 10px #0b98ac, 0 0 30px 13px #0b98ac inset;
-        } 
+        }
 
         .content p {
             margin-bottom: 20px;
@@ -140,7 +133,7 @@
 
         .map {
             color: #fff;
-            text-decoration:none;
+            text-decoration: none;
         }
 
         .social-icons a:hover {
@@ -214,8 +207,8 @@
 
         .timeline {
             position: relative;
-            margin: 50px auto 0; /* Center the timeline */
-            left: -150px; /* Align the timeline to the left */
+            margin: 50px auto 0;
+            left: -150px;
         }
 
         .timeline::after {
@@ -223,9 +216,9 @@
             position: absolute;
             width: 6px;
             background-color: #1b1b1b;
-            top: -50px; /* Move down to leave space for the icon */
-            bottom: 0px; /* Extend the line to the icon */
-            left: 0; /* Align the line to the left */
+            top: -50px;
+            bottom: 0;
+            left: 0;
             margin-left: -3px;
         }
 
@@ -254,7 +247,7 @@
         }
 
         .right {
-            left: 0; /* Align the timeline content to the left */
+            left: 0;
         }
 
         .right::after {
@@ -273,13 +266,13 @@
             .timeline::after {
                 left: 31px;
             }
-          
+
             .contain {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
-          
+
             .contain::before {
                 left: 60px;
                 border: medium solid white;
@@ -290,12 +283,12 @@
             .left::after, .right::after {
                 left: 15px;
             }
-          
+
             .right {
                 left: 0%;
             }
         }
-          
+
         .edu {
             display: flex;
             justify-content: flex-start;
@@ -318,7 +311,6 @@
             padding-left: 20px;
             padding-top: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -350,9 +342,7 @@
                 </div>
                 <a href="#" class="btn">Download CV</a>
             </div>
-            
-                <img src="icon.png" class="image-container">
-            
+            <img src="icon.png" class="image-container" alt="Profile Picture">
         </section>
     </main>
     <br><br><br>
@@ -380,8 +370,8 @@
                 <span>Unity</span>
             </div>
             <div class="skill-card">
-                <img src="html-logo.png" alt="Html & CSS">
-                <span>Html & CSS</span>
+                <img src="html-logo.png" alt="HTML & CSS">
+                <span>HTML & CSS</span>
             </div>
             <div class="skill-card">
                 <img src="js.png" alt="JavaScript">
@@ -393,14 +383,17 @@
             </div>
         </div>
     </div>
-    <br><br><br><br>
+    <br><br><br>
     <div class="edu">
-        <img src="edu.png" alt="Education Icon"> <h1>Education</h1>
+        <img src="edu.png" alt="Education Icon">
+        <h1>Education</h1>
     </div>
     <div class="timeline">
         <div class="contain right">
             <div class="contentc">
-                <a href="https://maps.app.goo.gl/koDbc6CvYvZqf8Eh6" class="map" target="_blank"><h2>Vellore Institute of Technology</h2></a>
+                <a href="https://maps.app.goo.gl/koDbc6CvYvZqf8Eh6" class="map" target="_blank">
+                    <h2>Vellore Institute of Technology</h2>
+                </a>
                 <p>Chennai, India <br> 2023-2027</p>
             </div>
         </div>
