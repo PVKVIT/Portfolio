@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1b1b1b;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin-left: 200%;
+            margin-top: -7%;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+            font-size: large;
+            transition: 0.3s;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            width: 10%;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            background-color: #1b1b1b;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            max-width: 50%;
+            padding: 40px;
+            margin-left: 60px;
+            margin-right: 50px;
+        }
+
+        .content h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #00bcd4;
+            transform: 0.5s;
+        }
+
+        .hero h2{
+            transition: 0.5s;
+        }
+
+        .content h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        main:hover h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            transition: 0.5s;
+        }
+
+        .content h3 span {
+            color: #00bcd4;
+            transition: 0.5s;
+        }
+
+        main:hover img {
+            height: 320px;
+            width: 320px;
+            transition: 0.5s;
+            box-shadow: 0 0 20px 8px #0b98ac, 0 0 24px 10px #0b98ac, 0 0 30px 13px #0b98ac inset;
+        } 
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-right: 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .map {
+            color: #fff;
+            text-decoration:none;
+        }
+
+        .social-icons a:hover {
+            color: #00bcd4;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #008c9e;
+        }
+
+        .image-container {
+            border-radius: 150px;
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 0 20px 8px #03cbe6, 0 0 24px 10px #03cbe6, 0 0 30px 13px #03cbe6 inset;
+            transition: 0.5s;
+            opacity: 70%;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .skills-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .skill-card {
+            background-color: #1b1b1b;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            background-color: #03cbe6;
+        }
+
+        .skill-card img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card span {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 50px auto 0; /* Center the timeline */
+            left: -150px; /* Align the timeline to the left */
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #1b1b1b;
+            top: -50px; /* Move down to leave space for the icon */
+            bottom: 0px; /* Extend the line to the icon */
+            left: 0; /* Align the line to the left */
+            margin-left: -3px;
+        }
+
+        .contain {
+            padding: 10px 40px;
+            position: relative;
+            background-color: transparent;
+            width: 100%;
+        }
+
+        .contain::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #1b1b1b;
+            border: 4px solid #FF9F55;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 0; /* Align the timeline content to the left */
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .contentc {
+            padding: 10px 10px;
+            background-color: transparent;
+            color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+          
+            .contain {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+          
+            .contain::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+          
+            .right {
+                left: 0%;
+            }
+        }
+          
+        .edu {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-left: 80px;
+            position: relative;
+        }
+
+        .edu img {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #fff;
+            background-color: #1b1b1b;
+            padding: 5px;
+            border-radius: 50%;
+        }
+
+        .edu h1 {
+            font-size: 50px;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio.</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h1>Hello, I'm</h1>
+                <h2>Prasanna Venkatesh</h2>
+                <h3>A passionate <span>Developer</span></h3>
+                <p>Student of VIT Chennai | Engineer at Shaurya Racing | Technical Member at AIC VIT-C</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+            
+                <img src="icon.png" class="image-container">
+            
+        </section>
+    </main>
+    <br><br><br>
+    <div class="container">
+        <h1 class="skills-title">My Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="python.png" alt="Python">
+                <span>Python</span>
+            </div>
+            <div class="skill-card">
+                <img src="java.png" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="skill-card">
+                <img src="cpp.png" alt="C++">
+                <span>C++</span>
+            </div>
+            <div class="skill-card">
+                <img src="sw.png" alt="SolidWorks">
+                <span>SolidWorks</span>
+            </div>
+            <div class="skill-card">
+                <img src="unity.png" alt="Unity">
+                <span>Unity</span>
+            </div>
+            <div class="skill-card">
+                <img src="html-logo.png" alt="Html & CSS">
+                <span>Html & CSS</span>
+            </div>
+            <div class="skill-card">
+                <img src="js.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <img src="sql.png" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="edu">
+        <img src="edu.png" alt="Education Icon"> <h1>Education</h1>
+    </div>
+    <div class="timeline">
+        <div class="contain right">
+            <div class="contentc">
+                <a href="https://maps.app.goo.gl/koDbc6CvYvZqf8Eh6" class="map" target="_blank"><h2>Vellore Institute of Technology</h2></a>
+                <p>Chennai, India <br> 2023-2027</p>
+            </div>
+        </div>
+        <div class="contain right">
+            <div class="contentc">
+                <h2>Lalaji Memorial Omega International School</h2>
+                <p>Chennai, India <br>2012-2023</p>
+            </div>
+        </div>
+        <div class="contain right">
+            <div class="contentc">
+                <h2>The Indian School</h2>
+                <p>Manama, Bahrain<br> 2008-2011</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
